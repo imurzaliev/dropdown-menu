@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #bc6c25;
+  --primary-light: #dda15e;
+  --secondary-color: #606c38;
+  --secondary-dark: #283618;
+  --light: #fefae0;
+  --nav-size:60px;
+  --border:1px solid var(var(--secondary-dark))
+  --border-radius:8px;
+  --speed:500ms;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  height: 100vh;
+  background-size: cover;
+  background-image: url('./nathan-defiesta-faPVxx0MDTM-unsplash.jpg');
+}
+
+
+.navbar{
+  height: var(--nav-size);
+  background-color: var(--secondary-color);
+  padding: 0 1rem;
+  border-bottom: var(--border);
+}
+
+.navbar-nav{
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item{
+  width:calc(var(--nav-size)*0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Icon Button */
+.icon-button{
+  --button-size:calc(var(--nav-size) * 0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  background-color: var(--secondary-color);
+  box-shadow: inset 0 0 15px var(--secondary-dark);
+  border-radius: 50%;
+  padding: 5px;
+  margin:2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover{
+  filter: brightness(1.2);
+}
+
+.icon-button svg{
+  color: var(--light);
+  width: 20px;
+  height: 20px;
+}
