@@ -4,10 +4,10 @@
   --secondary-color: #606c38;
   --secondary-dark: #283618;
   --light: #fefae0;
-  --nav-size:60px;
-  --border:1px solid var(var(--secondary-dark))
-  --border-radius:8px;
-  --speed:500ms;
+  --nav-size: 60px;
+  --border: 1px solid var(--secondary-dark);
+  --border-radius: 8px;
+  --speed: 500ms;
 }
 
 * {
@@ -21,53 +21,90 @@
   background-image: url('./nathan-defiesta-faPVxx0MDTM-unsplash.jpg');
 }
 
-
-.navbar{
+.navbar {
   height: var(--nav-size);
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-dark);
   padding: 0 1rem;
   border-bottom: var(--border);
 }
 
-.navbar-nav{
+.navbar-nav {
   max-width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.nav-item{
-  width:calc(var(--nav-size)*0.8);
+.nav-item {
+  width: calc(var(--nav-size) * 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-a{
+a {
   text-decoration: none;
+  color: var(--light);
 }
 
 /* Icon Button */
-.icon-button{
-  --button-size:calc(var(--nav-size) * 0.5);
+
+.icon-button {
+  --button-size: calc(var(--nav-size) * 0.5);
   width: var(--button-size);
   height: var(--button-size);
-  background-color: var(--secondary-color);
-  box-shadow: inset 0 0 15px var(--secondary-dark);
+  background-color: var(--secondary-dark);
+  box-shadow: inset 0 0 15px var(--secondary-color);
   border-radius: 50%;
   padding: 5px;
-  margin:2px;
+  margin: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.icon-button:hover{
+.icon-button:hover {
   filter: brightness(1.2);
 }
 
-.icon-button svg{
+.icon-button svg {
   color: var(--light);
   width: 20px;
   height: 20px;
+}
+
+/* Dropdown Menu */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--secondary-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.active {
+  display: block;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+}
+
+.menu-item:hover {
+  background-color: var(--primary-light);
+}
+
+.icon-right {
+  margin-left: auto;
 }
