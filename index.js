@@ -1,6 +1,13 @@
-const caret = document.querySelector('[data-caret]');
-const dropdownContainer = document.querySelector('[data-dropdown]');
+const navItem = document.querySelectorAll('.nav-item');
 
-caret.addEventListener('click', () => {
-  dropdownContainer.classList.toggle('active');
+navItem.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const isDropdownButton = item.classList.contains('dropdown-btn');
+
+    let currentDropdown;
+    if (isDropdownButton) {
+      currentDropdown = item.querySelector('[data-dropdown]');
+      currentDropdown.classList.toggle('active');
+    }
+  });
 });
